@@ -30,10 +30,8 @@ class RGCRequestParser(object):
     def __init__(self):
         # uri = "mongodb://superuser:123456@172.22.164.85/?authSource=admin"
         # master
-        self.uri = "mongodb://superuser:123456@10.95.103.66:8801/?authSource=admin"
         
         # slave
-        # uri = "mongodb://superuser:123456@220.181.3.211/?authSource=admin"
         self.client = MongoClient(self.uri)
         self.db = self.client[u'rgctest']
         self.posts = self.db.posts
