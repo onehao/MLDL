@@ -1,2 +1,6 @@
 eclipse.preferences.version=1
-encoding//com/onehao/mongo/connect.py=utf-8
+encoding//com/onehao/logger.py=utf-8
+encoding//com/onehao/mlogger.py=utf-8
+encoding//com/onehao/mongo/RGCRequestParser.py=utf-8
+encoding//com/onehao/mongo/RGCRequestParser1.py=utf-8
+encoding//com/onehao/mongo/RgcStructure.py=utf-8
