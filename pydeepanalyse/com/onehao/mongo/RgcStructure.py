@@ -62,8 +62,8 @@ class Geocoder:
                     latlng=keyvalue[1].split(',')
                     lat = latlng[0]
                     lng = latlng[1]
-                    jsonmap['lat'] = lat
-                    jsonmap['lng'] = lng
+                    jsonmap['lat'] = float(lat)
+                    jsonmap['lng'] = float(lng)
 #                     file_str.write('\"lat\":\"' + lat + '\",') 
 #                     file_str.write('\"lng\":\"' + lng + '\",')   
                 else:
@@ -127,17 +127,18 @@ class RGC:
             from cStringIO import StringIO
             file_str = StringIO()
 #             file_str.write('{')
-            jsonmap['type'] = 'geocoderv2'
+            jsonmap['type'] = 'rgc'
             jsonmap['time'] = time
 #             file_str.write('\"type\":\"rgc\",') 
 #             file_str.write('\"time\":\"' + time + '\",') 
             for parameter in parameterList:
+                if 
                 keyvalue = parameter.split('=')
                 if keyvalue[0] == 'x':
-                    jsonmap['lng'] = keyvalue[1]
+                    jsonmap['lng'] = float(keyvalue[1])
 #                     file_str.write('\"lng\":\"' + keyvalue[1] + '\",') 
                 elif keyvalue[0] == 'y':
-                    jsonmap['lat'] = keyvalue[1]
+                    jsonmap['lat'] = float(keyvalue[1])
 #                     file_str.write('\"lat\":\"' + keyvalue[1] + '\",') 
                 else:
                     jsonmap[keyvalue[0]] = keyvalue[1]
@@ -174,4 +175,5 @@ class RGCStand:
         file_str.write('\"time\":\"' + self.time + '\"}')
         
         return file_str.getvalue()
-        
+ 
+
